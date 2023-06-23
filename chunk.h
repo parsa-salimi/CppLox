@@ -7,8 +7,15 @@
 
 
 
-enum OpCode { OP_RETURN, OP_CONSTANT_LONG,
-              OP_CONSTANT };
+enum OpCode {   OP_RETURN,
+                OP_CONSTANT_LONG,
+                OP_NEGATE,
+                OP_CONSTANT,
+                OP_ADD,
+                OP_SUBTRACT,
+                OP_MULTIPLY,
+                OP_DIVIDE,
+                 };
 
 struct Chunk {
     std::vector<uint8_t> code;

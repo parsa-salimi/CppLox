@@ -1,12 +1,19 @@
 #include "chunk.h"
+#include "vm.h"
 
 
-int main() {
+int main(int argc, char* argv[]) {
     Chunk chunk;
-    for(int i = 0; i < 500; i++) {
-        chunk.writeConstant(1.2, 123);
+    VM vm;
+    if(argc == 1) {
+        repl();
     }
-    chunk.writeChunk(OP_RETURN, 123);
-    chunk.disassembleChunk("test chunk");
+    else if (argc == 2) {
+        runFile(argv[1]);
+    }
+    else {
+        std::cerr << "Usage: clox [path]" << std::endl;
+        exit(64);
+    }
     return 0;
 }

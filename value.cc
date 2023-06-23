@@ -4,7 +4,7 @@ void ValueArray::writeValueArray(Value value) {
     values.push_back(value);
 }
 
-void ValueArray::printValue(Value value) {
+void printValue(Value value) {
     std::cout << "'" << value << "'";
 }
 

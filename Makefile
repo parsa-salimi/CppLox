@@ -1,7 +1,7 @@
 CXX = g++
 CXXFLAGS = -std=c++14 -Wall -MMD -g
 EXEC = cpplox
-OBJECTS = main.o chunk.o value.o
+OBJECTS = main.o chunk.o value.o vm.o
 DEPENDS = ${OBJECTS:.o=.d}
 
 ${EXEC}: ${OBJECTS}
